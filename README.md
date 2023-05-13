@@ -17,7 +17,7 @@ Controle de empréstimos e devoluções de livros
 Criação de relatórios
 Interface com gráficos para facilitar a visualização de dados
 ## Como utilizar
-Para utilizar o sistema, é necessário baixar os arquivos e colocá-los em um servidor web que possua suporte a PHP. Após isso, basta acessar o arquivo index.php e utilizar as funcionalidades do sistema.
+Para utilizar o sistema, é necessário baixar os arquivos e colocá-los em um servidor local que possua suporte a PHP. Após isso, basta acessar o arquivo Home.php e utilizar as funcionalidades do sistema,ou acesse o ###link:https://wda-livraria.000webhostapp.com/
 
 ## Contribuindo
 Contribuições são sempre bem-vindas! Sinta-se à vontade para informar melhorias ou correções de bugs.
