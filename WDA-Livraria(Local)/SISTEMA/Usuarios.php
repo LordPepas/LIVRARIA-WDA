@@ -102,7 +102,7 @@ $result = $conexao->query($sql);
                 </tr>
             </thead>
 
-            <body>
+            <tbody>
                 <?php
                 // Laço while para percorrer todos os dados de usuário obtidos do banco de dados
                 while ($user_data = mysqli_fetch_assoc($result)) {
@@ -129,7 +129,7 @@ $result = $conexao->query($sql);
                     echo "</tr>";
                 }
                 ?>
-            </body>
+            </tbody>
         </table>
     </div>
 </body>
