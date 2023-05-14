@@ -108,17 +108,16 @@ $result = $conexao->query($sql);
 
             <tbody>
                 <?php
-                while ($user_data = mysqli_fetch_assoc($result)) {
+                while ($hist_data = mysqli_fetch_assoc($result)) {
                     echo "<tr>";
-                    $user_data['Data_aluguel'];
-                    echo "<td>" . $user_data['Cod_hist'] . "</td>";
-                    echo "<td>" . $user_data['Nome_livro'] . "</td>";
-                    echo "<td>" . $user_data['Nome_usuario'] . "</td>";
-                    echo "<td>" . date('d/m/Y', strtotime($user_data['Data_aluguel'])) . "</td>";
-                    echo "<td>" . date('d/m/Y', strtotime($user_data['Data_previsão'])) . "</td>";
-                    echo "<td>" . date('d/m/Y', strtotime($user_data['Data_devolução'])) . "</td>";
-                    echo "<td>" . $user_data['Quantidade'] . "</td>";
-                    if (strtotime($user_data['Data_previsão']) >= strtotime($user_data['Data_devolução'])) {
+                    echo "<td>" . $hist_data['Cod_hist'] . "</td>";
+                    echo "<td>" . $hist_data['Nome_livro'] . "</td>";
+                    echo "<td>" . $hist_data['Nome_usuario'] . "</td>";
+                    echo "<td>" . date('d/m/Y', strtotime($hist_data['Data_aluguel'])) . "</td>";
+                    echo "<td>" . date('d/m/Y', strtotime($hist_data['Data_previsão'])) . "</td>";
+                    echo "<td>" . date('d/m/Y', strtotime($hist_data['Data_devolução'])) . "</td>";
+                    echo "<td>" . $hist_data['Quantidade'] . "</td>";
+                    if (strtotime($hist_data['Data_previsão']) >= strtotime($hist_data['Data_devolução'])) {
                         echo "<td>
                             <a class='btn btn-sm' onclick='confirmPrazo()' title='Entregue no prazo'>
                             <img src='../assets/img/prazo.png' width='26' height='26'>
@@ -133,7 +132,6 @@ $result = $conexao->query($sql);
                     }
                 }
                 echo "</tr>";
-                // 
                 ?>
             </tbody>
         </table>
