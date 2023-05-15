@@ -15,6 +15,7 @@ if ((!isset($_SESSION['username']) == true) and (!isset($_SESSION['senha']) == t
     // Redireciona o usuário para a página de login
     header('Location: ../ADMIN/login.php');
   }
+
 if (!empty($_GET['search'])) {
     $data = $_GET['search'];
 
