@@ -13,7 +13,7 @@ print_r($_SESSION);
 // Verifica se não existem informações de email e senha na sessão
 if ((!isset($_SESSION['username']) == true) and (!isset($_SESSION['senha']) == true)) {
   // Destrói as informações existentes na sessão
-  unset($_SESSION['email']);
+  unset($_SESSION['username']);
   unset($_SESSION['senha']);
 
   // Redireciona o usuário para a página de login
