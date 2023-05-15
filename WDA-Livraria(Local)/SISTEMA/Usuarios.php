@@ -4,6 +4,7 @@ session_start();
 
 // Inclui o arquivo de configuração da conexão com o banco de dados
 include_once("../Config.php");
+
 /* 
 // Debug: imprime o array $_SESSION
 print_r($_SESSION); 
