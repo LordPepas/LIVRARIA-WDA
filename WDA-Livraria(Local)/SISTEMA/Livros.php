@@ -1,6 +1,20 @@
 <?php
 session_start();
 include_once("../Config.php");
+/* 
+// Debug: imprime o array $_SESSION
+print_r($_SESSION); 
+*/
+
+// Verifica se não existem informações de username e senha na sessão
+if ((!isset($_SESSION['username']) == true) and (!isset($_SESSION['senha']) == true)) {
+    // Destrói as informações existentes na sessão
+    unset($_SESSION['username']);
+    unset($_SESSION['senha']);
+  
+    // Redireciona o usuário para a página de login
+    header('Location: ../ADMIN/login.php');
+  }
 if (!empty($_GET['search'])) {
     $data = $_GET['search'];
     $sql = "SELECT Cod_livro,Nome_livro,editora.Nome_editora,Autor,Lançamento,Quantidade
