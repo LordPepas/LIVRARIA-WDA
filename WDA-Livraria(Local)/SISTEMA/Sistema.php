@@ -10,7 +10,7 @@ include_once("../Config.php");
 print_r($_SESSION); 
 */
 
-// Verifica se não existem informações de email e senha na sessão
+// Verifica se não existem informações de username e senha na sessão
 if ((!isset($_SESSION['username']) == true) and (!isset($_SESSION['senha']) == true)) {
   // Destrói as informações existentes na sessão
   unset($_SESSION['username']);
